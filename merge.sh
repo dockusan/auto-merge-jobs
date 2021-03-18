@@ -36,7 +36,12 @@ git merge $SOURCE_BRANCH
 
 if [ $? -eq 0 ]; then
   git push origin $DES_BRANCH
-  echo "Merge successful"
+  if [ $? -eq 0 ]; then
+    echo "Merge successful"
+  else
+    echo "Merge failed"
+  exit 1
+  fi
 else
   echo "Merge failed"
   exit 1
