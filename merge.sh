@@ -40,7 +40,7 @@ if [ $? -eq 0 ]; then
     echo "Merge successful"
   else
     echo "Merge failed"
-  exit 1
+    exit 1
   fi
 else
   echo "Merge failed"
